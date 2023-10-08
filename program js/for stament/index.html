@@ -1,0 +1,24 @@
+for (let i = 1; i <= 5; i++) {
+    console.log(i);
+  }
+  // menggubakan for statement
+  function fibonacci(panjangDeret) {
+    const deretFibonacci = [0, 1];
+  
+    if (panjangDeret <= 2) {
+      return deretFibonacci.slice(0, panjangDeret);
+    }
+  
+    for (let i = 2; i < panjangDeret; i++) {
+      const angkaTerbaru = deretFibonacci[i - 1] + deretFibonacci[i - 2];
+      deretFibonacci.push(angkaTerbaru);
+    }
+  
+    return deretFibonacci;
+  }
+  
+  const panjangDeret = 10;
+  const hasilFibonacci = fibonacci(panjangDeret);
+  
+  console.log(`Deret Fibonacci dengan ${panjangDeret} angka:`);
+  console.log(hasilFibonacci);
